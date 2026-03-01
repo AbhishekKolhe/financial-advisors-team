@@ -1,6 +1,6 @@
 from phi.agent import Agent
 from phi.model.groq import Groq
-from phi.model.openai import OpenAIChat
+#from phi.model.openai import OpenAIChat
 from phi.tools.yfinance import YFinanceTools
 
 def get_company_symbol(company: str) -> str:
@@ -12,7 +12,7 @@ def get_company_symbol(company: str) -> str:
         str: The symbol for the company
     """
     symbols={
-        "AIwithHassan": "AAPL",
+        "Abhishek": "AAPL",
         "Tesla": "TSLA",
         "Google": "GOOGL"
     }
@@ -21,8 +21,8 @@ def get_company_symbol(company: str) -> str:
 
 
 test_agent=Agent(
-    #model=Groq(id="llama-3.3-70b-versatile"),
-    model=OpenAIChat(id="gpt-4o-mini"),
+    model=Groq(id="llama-3.3-70b-versatile"),
+    #model=OpenAIChat(id="gpt-4o-mini"),
     tools=[YFinanceTools(
         stock_price=True,
         analyst_recommendations=True,

@@ -6,12 +6,14 @@ name = "pypi"
 [packages]
 phidata = "*"
 groq = "*"
+fastapi = "*"
+uvicorn = "*"
 yfinance = "*"
+duckduckgo-search = "*"
+python-dotenv = "*"
 openai = "*"
 packaging = "*"
-duckduckgo-search = "*"
 sqlalchemy = "*"
-fastapi = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 
